@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContCard extends StatelessWidget {
   final String imgpaz;
@@ -16,20 +17,14 @@ class ContCard extends StatelessWidget {
     return Row(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 12).r,
           child: Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: const [
-                  BoxShadow(
-                      color: Colors.black54,
-                      offset: Offset(5, 5),
-                      spreadRadius: 1,
-                      blurRadius: 5)
-                ]),
+              borderRadius: BorderRadius.circular(10),
+            ),
             child: Container(
-              width: MediaQuery.of(context).size.width * 0.25,
-              height: MediaQuery.of(context).size.width * 0.2,
+              width: 150.w,
+              height: 150.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 image: DecorationImage(
@@ -41,37 +36,37 @@ class ContCard extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width * 0.05,
-                    fontWeight: FontWeight.w400),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.008,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 18.0, left: 4),
-                child: Text(desc,
-                    style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width * 0.03,
-                        fontWeight: FontWeight.w400)),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.width * 0.02,
-              ),
-              Text('\$' + price,
+        SizedBox(
+          width: 10.w,
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.05,
+                  fontWeight: FontWeight.w400),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 18.0, left: 4),
+              child: Text(desc,
                   style: TextStyle(
-                      fontSize: MediaQuery.of(context).size.width * 0.04,
-                      fontWeight: FontWeight.w500)),
-            ],
-          ),
+                      fontSize: MediaQuery.of(context).size.width * 0.03,
+                      fontWeight: FontWeight.w400)),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.width * 0.02,
+            ),
+            Text('\$' + price,
+                style: TextStyle(
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                    fontWeight: FontWeight.w500)),
+          ],
         ),
       ],
     );

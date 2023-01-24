@@ -70,16 +70,16 @@ Widget _quantity(
       Row(
         children: <Widget>[
           CustomButton(
+              iconData: Icons.remove,
+              onTap: (() {
+                remove();
+              })),
+          _boxqnt(qty),
+          CustomButton(
               iconData: Icons.add,
               onTap: (() {
                 add();
               })),
-          _boxqnt(qty),
-          CustomButton(
-              iconData: Icons.remove,
-              onTap: (() {
-                remove();
-              }))
         ],
       ),
     ],

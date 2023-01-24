@@ -403,7 +403,10 @@ class _DetailState extends State<Detail> {
                         width: MediaQuery.of(context).size.width * 0.0001,
                       ),
                     ],
-                  )
+                  ),
+                  SizedBox(
+                    height: 12.h,
+                  ),
                 ],
               )
             ],
