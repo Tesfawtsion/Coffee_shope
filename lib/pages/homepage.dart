@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:todo/util/catageory_text.dart';
 
@@ -57,8 +58,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.only(left: 12.0),
             child: Text(
               'Find The Best Coffe for You',
-              style: GoogleFonts.bebasNeue(
-                  fontSize: MediaQuery.of(context).size.width * 0.12),
+              style: GoogleFonts.bebasNeue(fontSize: 55.sp),
             ),
           ),
           const SizedBox(
@@ -67,6 +67,7 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
+              style: TextStyle(fontSize: 20.sp),
               decoration: InputDecoration(
                   contentPadding: EdgeInsets.only(left: 25, right: 25),
                   fillColor: Colors.black54,
@@ -84,11 +85,11 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.all(Radius.circular(25.0)))),
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.03,
+            height: 50.h,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: coffType.length,
@@ -102,13 +103,16 @@ class _HomePageState extends State<HomePage> {
                 }),
           ),
           SizedBox(
-              height: MediaQuery.of(context).size.height * 0.3,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 8),
-                    child: GestureDetector(
+            height: 20.h,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 18.0.w),
+            child: SizedBox(
+                height: 380.h,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    GestureDetector(
                       onTap: () => {
                         Navigator.push(
                             context,
@@ -125,10 +129,10 @@ class _HomePageState extends State<HomePage> {
                           imagePath: 'lib/images/Coffe1.jpg',
                           price: '4.20'),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 8),
-                    child: GestureDetector(
+                    SizedBox(
+                      width: 10.w,
+                    ),
+                    GestureDetector(
                       onTap: () => {
                         Navigator.push(
                             context,
@@ -145,10 +149,10 @@ class _HomePageState extends State<HomePage> {
                           imagePath: 'lib/images/Coffe2.jpg',
                           price: '9.20'),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 8),
-                    child: GestureDetector(
+                    SizedBox(
+                      width: 10.w,
+                    ),
+                    GestureDetector(
                       onTap: () => {
                         Navigator.push(
                             context,
@@ -165,28 +169,34 @@ class _HomePageState extends State<HomePage> {
                           imagePath: 'lib/images/Coffe3.jpg',
                           price: '9.20'),
                     ),
-                  ),
-                ],
-              )),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
+                  ],
+                )),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 18.0.w, vertical: 18.h),
             child: Text(
               'Special for you',
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
             ),
           ),
-          CoffeeRow(
-            imgpz: 'lib/images/Coffe4.jpg',
-            text1: '5 Coffee Beans You',
-            text2: 'Must Try!',
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+            child: CoffeeRow(
+              imgpz: 'lib/images/Coffe4.jpg',
+              text1: '5 Coffee Beans You',
+              text2: 'Must Try!',
+            ),
           ),
           SizedBox(
             height: 12,
           ),
-          CoffeeRow(
-            imgpz: 'lib/images/Coffe5.jpg',
-            text1: 'Brazil Coffee Beans You',
-            text2: 'Must Try!',
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+            child: CoffeeRow(
+              imgpz: 'lib/images/Coffe5.jpg',
+              text1: 'Brazil Coffee Beans You',
+              text2: 'Must Try!',
+            ),
           ),
         ],
       ),

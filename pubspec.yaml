@@ -49,6 +49,7 @@ dependencies:
   credit_card_slider: ^1.0.1
   flex_color_scheme: ^6.1.1
   awesome_dialog: ^3.0.2
+  flutter_screenutil: ^5.6.0
 
 dev_dependencies:
   flutter_test:

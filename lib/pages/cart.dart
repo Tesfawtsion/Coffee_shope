@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:todo/pages/card.dart';
+import 'package:todo/reusable/card.dart';
 import 'package:todo/provider1.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/reusable/payment_card.dart';
@@ -10,7 +10,7 @@ import '../reusable/cart_container.dart';
 import '../reusable/container.dart';
 
 import '../util/pay_now.dart';
-import 'card2.dart';
+import 'package:todo/reusable/card2.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});
