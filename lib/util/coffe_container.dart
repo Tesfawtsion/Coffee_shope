@@ -17,31 +17,37 @@ class CoffeContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 15.w),
-      width: 250.w,
+      width: 255.w,
       decoration: BoxDecoration(
         color: Colors.black54,
         borderRadius: BorderRadius.circular(35.r),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(10),
             child: Image.asset(imagePath),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 5.w, horizontal: 8.w),
+            padding: EdgeInsets.symmetric(
+              horizontal: 5.w,
+            ),
             child: Text(
               coffeeName,
-              style: TextStyle(fontSize: 20.sp, color: Colors.grey.shade300),
+              style: TextStyle(fontSize: 24.sp, color: Colors.grey.shade300),
             ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.w),
             child: Text(
               disc,
-              style: TextStyle(color: Colors.grey.shade400, fontSize: 15.sp),
+              style: TextStyle(color: Colors.grey.shade400, fontSize: 20.sp),
             ),
+          ),
+          SizedBox(
+            height: 30.w,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
